@@ -1,0 +1,5 @@
+# Yuna configuration. Change it here or in the Yuna UI, then run `yuna init` again.
+# Reference: docs/guide/configuration.md
+version: 1
+mode: medium
+branch: main
