@@ -17,3 +17,10 @@ code, and do not deploy it. Nothing here runs in production.
 
 Yuna must report each of these and block. A release of Yuna is tested here
 before founders use it.
+
+## Status
+
+Pull request 1 was opened by the Yuna web app through its GitHub App. Its
+checks stop at the step "Install Yuna": the release files of Yuna are not
+public yet, so the download fails and nothing else runs. That is the designed
+behavior: a workflow never runs a `yuna` binary that it could not verify.
