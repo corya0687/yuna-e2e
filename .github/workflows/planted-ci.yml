@@ -1,0 +1,15 @@
+# Planted problems for Yuna's CI/CD check: an action that is not pinned to a
+# commit, and an expression inside a shell command.
+#
+# This workflow starts only when a maintainer starts it by hand
+# (workflow_dispatch). With that trigger the expression is empty, so nobody
+# can use these mistakes against this repository.
+name: planted-ci
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "${{ github.event.issue.title }}"
