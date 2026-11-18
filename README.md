@@ -13,7 +13,7 @@ code, and do not deploy it. Nothing here runs in production.
 | Container image | `Dockerfile` uses an old base image and runs as root |
 | Infrastructure config (IaC) | `main.tf` opens SSH to the internet and makes a bucket public |
 | CI/CD pipeline | `.github/workflows/planted-ci.yml` (it can only be started by hand) |
-| Threat model | routes without authentication in `server.js` and `app.py` |
+| Threat model | a write route and an admin route without authentication in `routes.js` (this check reports; it does not block) |
 
 Yuna must report each of these and block. A release of Yuna is tested here
 before founders use it.
